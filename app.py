@@ -16,8 +16,12 @@ class Todo(db.Model):
 
     def __repr__(self):
         return '<Task %r >'% self.id
+    
+@app.route("/")
+def loading():
+    return render_template("loading.html")
 
-@app.route ("/", methods=['POST', 'GET'])
+@app.route ("/home", methods=['POST', 'GET'])
 def index():
     # Logic for adding a task thats why we use POST
     if request.method == "POST":

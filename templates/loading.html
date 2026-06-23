@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Loading...</title>
+
+<meta http-equiv="refresh" content="3;url=/home">
+{% endblock %}
+
+{% block body %}
+<div class="loading-container">
+    <h1>Task Master</h1>
+    <p>Loading your tasks...</p>
+
+    <div class="loader"></div>
+</div>
+{% endblock %}

@@ -172,3 +172,34 @@ tr:hover td {
 .btn:active {
     transform: scale(0.98);
 }
+
+/* loading page */
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.loader {
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #3182ce;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
