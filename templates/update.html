@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>Task Master- Update Task</title>
 {% endblock %}
 
 {% block body %}
@@ -9,12 +9,13 @@
     <h1>Update Task</h1>
 
 
-
-    <Form action="/update/{{task.id}}" method="POST">
-        <input type="text" name="content" id="content" value="{{task.content}}">
-        <input type="submit" value="Update">
-    </Form>
-
+    <div class="card">
+        <form action="/update/{{task.id}}" method="POST" class="form-inline">
+            <input type="text" name="content" id="content" value="{{task.content}}" class="input-text" required>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
 
 </div>
 

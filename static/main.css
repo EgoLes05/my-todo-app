@@ -1,4 +1,174 @@
-body {
+/* 
+   GLOBAL RESET & FONTS
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    font-family: sans-serif;
-} 
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9; /* Modern light-gray background */
+    color: #2d3748;
+    padding: 40px 20px;
+}
+
+/* Base Wrapper to constrain and center layout content */
+.content {
+    max-width: 750px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1 {
+    color: #1a202c;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h4 {
+    color: #718096;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 
+   CARDS (Content Container)
+    */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* 
+   MODERN TABLES
+    */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f7fafc;
+    color: #4a5568;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 14px 16px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none; /* Cleans up the last row's line */
+}
+
+tr:hover td {
+    background-color: #f8fafc; /* Subtle interaction row effect */
+}
+
+/* Action alignment cell */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+/* 
+   FORMS & INPUTS
+    */
+.form-inline {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.input-text {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-text:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* 
+   BUTTONS
+    */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    background-color: #3182ce;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #2b6cb0;
+}
+
+.btn-secondary {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-danger {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.btn-danger:hover {
+    background-color: #feb2b2;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
