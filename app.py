@@ -31,7 +31,7 @@ def index():
         try:
             db.session.add(new_task) # Adding this to ower database session
             db.session.commit()
-            return redirect("/")
+            return redirect("/") #Back to home Page
         
         except: # Just in case it fails to added a task
             return "There was an issue adding your Task"
@@ -53,7 +53,7 @@ def delete(id):
         return "There was a problem deleting that task"
     
 
-@app.route("/update/<int:id>", methods=["GET", "POSt"])
+@app.route("/update/<int:id>", methods=["GET", "POST"])
 
 def update(id):
 
