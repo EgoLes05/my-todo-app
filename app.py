@@ -31,7 +31,7 @@ def index():
         try:
             db.session.add(new_task) # Adding this to ower database session
             db.session.commit()
-            return redirect("/") #Back to home Page
+            return redirect("/home") #Back to home Page
         
         except: # Just in case it fails to added a task
             return "There was an issue adding your Task"
@@ -48,7 +48,7 @@ def delete(id):
     try:
         db.session.delete(task_to_delete) # Deletes froms database
         db.session.commit()
-        return redirect("/") #Back to home Page
+        return redirect("/home") #Back to home Page
     except:
         return "There was a problem deleting that task"
     
@@ -64,7 +64,7 @@ def update(id):
 
         try: # Use only commit cause we are update not adding or deleting
             db.session.commit()
-            return redirect("/")
+            return redirect("/home")
         except:
             return "There was an issue Updating your Task"
     else:
